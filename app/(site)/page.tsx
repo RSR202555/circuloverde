@@ -304,21 +304,24 @@ export default function HomePage() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {[
               {
-                sku: "K-992-01",
-                nome: "Moto-redutor High-Torque",
+                sku: "K-001",
+                nome: "Anel Coletor",
                 badge: "KREBS Original",
+                imagem: "/produtos/Anel coletor.jpg",
                 icone: "settings",
               },
               {
-                sku: "IW-044",
-                nome: "Aspersores de Precisão",
-                badge: "Componente i-Wob",
+                sku: "K-004",
+                nome: "Bocais Especiais",
+                badge: "Irrigação KREBS",
+                imagem: "/produtos/Bocais (R$9,05).jpg",
                 icone: "opacity",
               },
               {
-                sku: "SM-LORA-X",
-                nome: "Módulos de Controle 4G",
-                badge: "Smart Tech",
+                sku: "K-023",
+                nome: "Câmara de Ar 14-9-24",
+                badge: "Reposição Oficial",
+                imagem: "/produtos/Câmara de ar 14-9-24.jpg",
                 icone: "developer_board",
               },
             ].map((produto) => (
@@ -338,9 +341,17 @@ export default function HomePage() {
                   {produto.nome}
                 </h3>
                 <div className="relative h-56 w-full mb-6 flex items-center justify-center bg-surface-container-low rounded-2xl overflow-hidden">
-                  <span className="material-symbols-outlined text-primary/20 text-9xl group-hover:scale-110 transition-transform duration-700">
-                    {produto.icone}
-                  </span>
+                  {produto.imagem ? (
+                    <img
+                      src={produto.imagem}
+                      alt={produto.nome}
+                      className="max-w-[80%] max-h-[80%] object-contain group-hover:scale-110 transition-transform duration-700 mix-blend-multiply"
+                    />
+                  ) : (
+                    <span className="material-symbols-outlined text-primary/20 text-9xl group-hover:scale-110 transition-transform duration-700">
+                      {produto.icone}
+                    </span>
+                  )}
                 </div>
                 <Link
                   href="/catalogo"
