@@ -1,0 +1,85 @@
+{
+  "categorias": [
+    {
+      "id": "motores",
+      "nome": "Moto-redutores",
+      "icone": "settings",
+      "produtos": [
+        {
+          "sku": "K-992-01",
+          "nome": "Moto-redutor High-Torque",
+          "badge": "KREBS Original",
+          "disponibilidade": "Pronta Entrega",
+          "imagem": "/produtos/motoredutor.jpg",
+          "especificacoes": [
+            "Vedação IP66 Industrial",
+            "Rolamentos Blindados",
+            "Proteção Térmica Integrada"
+          ],
+          "descricao": "Motor de alta performance desenvolvido para operar em condições severas do campo brasileiro. Engenharia alemã com adaptação tropical."
+        }
+      ]
+    },
+    {
+      "id": "aspersores",
+      "nome": "Aspersores de Precisão",
+      "icone": "opacity",
+      "produtos": [
+        {
+          "sku": "IW-044",
+          "nome": "Aspersor i-Wob Precision",
+          "badge": "Componente i-Wob",
+          "disponibilidade": "Alta Performance",
+          "imagem": "/produtos/aspersor.jpg",
+          "especificacoes": [
+            "Gotas Ultra-uniformes",
+            "Redução de Deriva pelo Vento",
+            "Baixa Intensidade de Aplicação"
+          ],
+          "descricao": "Tecnologia i-Wob para distribuição uniforme de água. Reduz deriva pelo vento e otimiza o aproveitamento hídrico."
+        }
+      ]
+    },
+    {
+      "id": "controle",
+      "nome": "Módulos de Controle",
+      "icone": "developer_board",
+      "produtos": [
+        {
+          "sku": "SM-LORA-X",
+          "nome": "Módulo de Controle 4G/LoRa",
+          "badge": "Smart Tech",
+          "disponibilidade": "Tecnologia LoRa",
+          "imagem": "/produtos/modulo-controle.jpg",
+          "especificacoes": [
+            "Gestão via Smartphone",
+            "Alertas de Pressão em Real-time",
+            "Backup de Dados em Nuvem"
+          ],
+          "descricao": "Módulo de controle inteligente com conectividade 4G e LoRa para monitoramento remoto do pivô central."
+        }
+      ]
+    },
+    {
+      "id": "pivos",
+      "nome": "Pivôs Centrais",
+      "icone": "360",
+      "produtos": [
+        {
+          "sku": "K-PC-2500",
+          "nome": "KREBS Pivot Central 2500",
+          "badge": "KREBS Original",
+          "disponibilidade": "Sob Encomenda",
+          "imagem": "/produtos/pivo-central.jpg",
+          "especificacoes": [
+            "Aço Galvanizado a Fogo",
+            "Controle Rede 4G / LoRa Smart",
+            "Alcance até 1.000m de raio",
+            "Garantia estrutural 10 anos"
+          ],
+          "descricao": "Sistema de pivô central de alto desempenho. Engenharia alemã adaptada à realidade tropical brasileira, garantindo uniformidade hídrica total."
+        }
+      ]
+    }
+  ]
+}
