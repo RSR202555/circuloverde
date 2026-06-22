@@ -61,11 +61,19 @@ export async function middleware(request: NextRequest) {
   const isCadastroPage = request.nextUrl.pathname === "/admin/cadastro";
 
   if (isAdminRoute && !isLoginPage && !isCadastroPage && !isAuthenticated) {
-    return NextResponse.redirect(new URL("/admin/login", request.url));
+    const response = NextResponse.redirect(new URL("/admin/login", request.url));
+    for (const cookie of supabaseResponse.cookies.getAll()) {
+      response.cookies.set(cookie.name, cookie.value, cookie);
+    }
+    return response;
   }
 
   if (isLoginPage && isAuthenticated) {
-    return NextResponse.redirect(new URL("/admin/dashboard", request.url));
+    const response = NextResponse.redirect(new URL("/admin/dashboard", request.url));
+    for (const cookie of supabaseResponse.cookies.getAll()) {
+      response.cookies.set(cookie.name, cookie.value, cookie);
+    }
+    return response;
   }
 
   return supabaseResponse;
