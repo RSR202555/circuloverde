@@ -1,6 +1,6 @@
 import { createClient } from "@/lib/supabase/server";
 import { redirect } from "next/navigation";
-import { cookies, headers } from "next/headers";
+import { cookies } from "next/headers";
 import AdminSidebar from "@/components/admin/AdminSidebar";
 
 export default async function AdminLayout({
@@ -8,13 +8,6 @@ export default async function AdminLayout({
 }: {
   children: React.ReactNode;
 }) {
-  const headersList = await headers();
-  const pathname = headersList.get("x-pathname") || "";
-
-  if (pathname === "/admin/login" || pathname === "/admin/cadastro") {
-    return <>{children}</>;
-  }
-
   let authenticated = false;
 
   // 1. Try Supabase Auth
